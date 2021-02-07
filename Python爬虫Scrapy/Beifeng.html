@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>我的课程-学习中心</title>
+    <link href="/Content/bootstrap?v=Xr758z2-9K-tpTeCr_JmEDmSn20H2TVeGrgJX0gzZdo1" rel="stylesheet"/>
+
+    <link href="/Content/css?v=schcLMSrt1YeB8FYuTCERhWiBy6l3zp5_F3lbxsO2K41" rel="stylesheet"/>
+
+    <!--[if lte IE 8]>
+     <link href="/Content/ie8?v=1Qwvhq-cNjRRPe0a01AWux-y58Ve13qn6FCGKQDJtTo1" rel="stylesheet"/>
+
+    <![endif]-->
+    
+
+    <link href="/Content/vendors/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="/Content/vendors/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="/Content/vendors/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="/Content/pagination.css" rel="stylesheet" />
+    <style type="text/css">
+        .xiuxue, .contract {
+            position: relative;
+            left: 25px;
+            border: 0px solid;
+            background-color: #08b766;
+            color: white;
+        }
+
+        .manage-sx-search {
+            display: inline-block;
+            width: 240px;
+            height: 40px;
+            border: 1px solid #e4e7e8;
+            border-radius: 5px;
+            float: right;
+            background: white;
+        }
+
+            .manage-sx-search .iptxt {
+                float: left;
+                width: 210px;
+                height: 38px;
+                border: 0;
+            }
+
+            .manage-sx-search .ipbtn {
+                width: 20px;
+                height: 38px;
+                background: url(../../images/search_btn.png) no-repeat left center;
+            }
+    </style>
+
+    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+    <script src="/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+            <script type="text/javascript">
+                $(function(){
+                    if(window.location.href.toLowerCase().indexOf('/profile/profile') == -1){
+                        $.post('/Course/Course/GetMyGetAJobIsNeedAContract', function (data) {
+                            if (!data.IsSuccess && data.url) {
+                                window.location.href = data.url;
+                            }
+                        });
+                    }
+                });
+            </script>
+
+</head>
+
+<body class="body-60">
+    <div class="out">
+        <!--Header Begin-->
+        <nav class="navbar navbar-fixed-top  header-60">
+            <div class="w1200 clearfix">
+                <ul class="nav navbar-right person-link">
+                    
+                    
+                    <li class="notice">
+                        <a class="ico" href='/Message/Message?type=98e014d5-5467-463b-b8aa-15af2818afc1'></a>
+                        <a class="num" id="systemMessageNotice" href='/Message/Message?type=98e014d5-5467-463b-b8aa-15af2818afc1' title="系统消息" style="display:none;">0</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="overf name" title="9813336@qq.com">Kyle</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href='/Profile/Profile'>个人中心</a></li>
+                            <li><a id="logoff" href='/Home/Logoff' target="_self">退出帐号</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="navbar-header">
+                    <a class="navbar-brand logo" href='http://www.ibeifeng.com/'>
+                            <img alt="北风网" src='/images/logo.png' width="103" height="60">
+                    </a>
+                </div>
+
+                <ul class="h-nav fl">
+                    <li>
+                        <a href='http://www.ibeifeng.com/' target="_blank">首页</a>
+                    </li>
+                    <li>
+                        <a href='http://tpcsc.ibeifeng.com/Job/Job'>就业课</a>
+                    </li>
+                    <li>
+                        <a href='http://q.ibeifeng.com/' target="_blank">社区</a>
+                    </li>
+                    <li class="on">
+                        <a href='http://tpcss.ibeifeng.com/' microspot="学习中心-头部学习中心菜单">学习中心</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Header End-->
+<!--Bnner Begin-->
+
+<div class="plan-stu" style="background-image:url(/images/banner04.jpg)">
+    <div class="w1200 clearfix">
+            <img class="head-photo head-photo-100" src="http://fileupload.ibeifeng.com/ServerFiles/BfAuthCenter/2018/05/14/4edd4b97-69ae-4787-b05b-f0a6841cdf77\0.JPG" />
+            <div class="con">
+                <h2 class="mb15">Kyle</h2>
+
+                
+            </div>
+    </div>
+</div>
+<!--Bnner End-->
+        <!--Main Begin-->
+        <div class="wrap">
+            
+            <div class="w1200 clearfix">
+                
+
+<!--Right Begin-->
+<div class="right-940 fr bgWhite">
+    <div class="main-head">
+        <div class="corner-btn colGray">共<span class="colOrange" id="couseCount">2</span>门</div>
+        <h2 class="title"><span class="title-name">我的课程</span></h2>
+    </div>
+
+    <div class="my-course">
+        <div class="js-tab tab-list-1 clearfix mb20">
+            <a class="cur" microspot="学习中心-我的课程-右侧就业课菜单">就业课</a>
+            <a microspot="学习中心-我的课程-右侧课程菜单">课程</a>
+            <a microspot="学习中心-我的课程-右侧收藏课程菜单">收藏课程</a>
+            <a microspot="学习中心-我的课程-认证考试菜单" id="divCert">认证考试</a>
+            
+            <span class="manage-sx-search">
+                <input class="iptxt searchTxt" type="text" id="txtKeyWord" placeholder="请输入名称进行筛选" />
+                <input class="ipbtn" type="button" id="btnSearch" />
+            </span>
+        </div>
+        <div class="js-tab-box" ng-app="profileApp">
+            <div class="js-tab-con" style="display: block;">
+                <div class="noContent-2 tcenter" style="display:none;" id="divNoneJyk">
+                    <i class="icon icon-cup"></i>
+                    <p class="mb10">没有满足要求的数据</p>
+                </div>
+                    <div class="my-course-items">
+                        <ul class="clearfix">
+                                        <li class="myC-item">
+                                            
+                                            <a microspot="学习中心-我的课程-就业课产品-区块链实战开发系列之打造专属虚拟货币(含以太坊、发币、交易Demo等)" class="lxmimg" href="javascript:valid('href',false,'e06b02ed-a89b-4ae0-9753-0ebd2fd8935f')"><img src="http://fileupload.ibeifeng.com/ServerFiles/TPCSTeacher/2018/03/01/011f4794-719a-48fb-a560-9ad6f470f3cb\0.jpg" /><i></i></a>
+                                            <div class="con">
+                                                <a microspot="学习中心-我的课程-就业课产品-区块链实战开发系列之打造专属虚拟货币(含以太坊、发币、交易Demo等)" class="name overf" href="javascript:valid('href',false,'e06b02ed-a89b-4ae0-9753-0ebd2fd8935f')" title="区块链实战开发系列之打造专属虚拟货币(含以太坊、发币、交易Demo等)">区块链实战开发系列之打造专属虚拟货币(含以太坊、发币、交易Demo等)</a>
+                                                <p style="height:25px"><span class="mr10">课程：1</span>学时：0天</p>
+                                                <p>
+                                                    <button class="xiuxue" id="btn_e06b02ed-a89b-4ae0-9753-0ebd2fd8935f" onclick="quitSchool(&#39;e06b02ed-a89b-4ae0-9753-0ebd2fd8935f&#39;)"  style="">申请休学</button>
+                                                </p>
+                                            </div>
+                                        </li>
+                                <!--Pop-up Begin 完善用户信息-->
+                                    <li class="myC-item">
+                                        <div class="mask type-one"></div>
+                                            <a class="lxmimg" href="javascript:offLineValid(false,'811808eb-7bab-42b3-a5b8-711f7532fec8','431b051c-4cec-4c43-bdc3-34d05faa1f80','href')"><img src="http://fileupload.ibeifeng.com/ServerFiles/TPCSTeacher/2018/05/03/c9c612fe-85c2-4b6a-8ceb-2c5f81e472bf\0.jpg" /><i></i></a>
+                                        <div class="con">
+                                                <a microspot="学习中心-我的课程-就业课产品-零基础到数据（大数据）分析专家/首席分析师（CA）高端培训(周末远程直播)" class="name overf" href="javascript:offLineValid(false,'811808eb-7bab-42b3-a5b8-711f7532fec8','431b051c-4cec-4c43-bdc3-34d05faa1f80','href')">零基础到数据（大数据）分析专家/首席分析师（CA）高端培训(周末远程直播)</a>
+                                                <p style="height:25px"><span class="mr10">班制：周末制</span>正课时间：2018-05-26</p>
+                                                    <p><button class="contract" onclick="validGiftVideo('onclick',false,'811808eb-7bab-42b3-a5b8-711f7532fec8','b242b7d1-aaf3-4309-98fe-43720bd1eba4')">赠送视频</button></p>
+                                        </div>
+                                    </li>
+                                <!--Pop-up Begin 完善用户信息-->
+                        </ul>
+
+                    </div>
+                    <div aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="setOther">
+                        <div class="modal-dialog modal-540">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"></button>
+                                    <h4 class="modal-title"></h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="formImprove">
+                                        <input name="__RequestVerificationToken" type="hidden" value="epWXmB8eMamKc4q5gJgK8tafzVSVLfK7TuXe2xNe-wRwhoMxJJ1_PaUlNqMzaYIOjyTVyWUFiZTjCgx5Qg52YVMB64Ks_aDH10S_Tmaj5Yj9TZdluQ0xMI6nD9ucjO359_U23g2" />
+                                        <input type="hidden" name="RecordId" id="RecordId" />
+                                        <ul>
+                                            <li class="form-item form-item-120 clearfix">
+                                                <div style="right:45px;">
+                                                    <label style="position:relative;left:-315px">截止日期：</label>
+                                                    <span class="input-group date mydate-p100 js-datetimepicker-1 pull-left" style="width:68%;border-radius:0">
+                                                        <input type='text' class="form-control" on-finish-render-filters id="PlannedDay" date-format style="width:100%" />
+                                                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                    </span>
+
+                                                </div>
+                                            </li>
+                                            <li class="form-item form-item-120 clearfix">
+                                                <div style="position:relative;right:45px;">
+                                                    <label style="position:relative;bottom:25px;">备注：</label>
+                                                    <textarea id="Remark" name="Remark" class="iparea-p100 text" maxlength="4000" placeholder="说明休学的原因" style="width:270px;"></textarea>
+                                                </div>
+                                            </li>
+                                            <li class="form-item form-item-120 clearfix">
+                                                <label></label>
+                                                <div>
+
+                                                    <input class="ipbtn submit-btn mr30 otherButton" type="button" value="提交" id="schoolbtn" />
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><i></i><!-- /.modal-dialog -->
+                    </div>
+                                <!--Pop-up End 完善用户信息-->
+        <!--有课程 End-->
+            </div>
+            <div class="js-tab-con">
+                <input type="hidden" id="pageIndex" value="1" />
+                <!--有课程 Beign-->
+                <div class="my-course-items">
+                    <ul class="clearfix" id="container"></ul>
+                    <div class="slidePage">
+                        <div id="pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="js-tab-con">
+                <!--无课程 Beign-->
+                
+                <!--无课程 End-->
+                <!--有课程 Beign-->
+                <input type="hidden" id="pageIndexCollect" value="1" />
+                <div class="my-course-items my-collcourse-items">
+                    <ul class="clearfix" id="containerCollect"></ul>
+                    <div class="slidePage">
+                        <div id="paginationCollect"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="js-tab-con">
+                <div>
+                    <span class="select-160 select" style="display:none;" id="divSelect">
+                        <select id="ddlCertType"  style="border-color: black;height: 38px;width: 126%;">
+                            <option value="0" selected="selected">工信部</option>
+                            <option value="1">阿里云</option>
+                            <option value="2">百度ABC</option>
+                        </select>
+                    </span>
+                </div>
+                <div>
+                    <input type="hidden" id="pageIndexAuthExam" value="1" />
+                    <div class="my-course-items my-collcourse-items">
+                        <ul class="clearfix" id="containerAuthExam"></ul>
+                        <div class="slidePage">
+                            <div id="paginationAuthExam"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!--Right End-->
+
+                <!--Left Begin-->
+                    <div class="left-240 fl bgWhite">
+
+                        <ul class="s-menu mb30">
+                            <li class='cur'>
+                                <a href='/Course/Course' microspot="学习中心-左侧我的课程菜单">
+                                    <i class="icon icon-book"></i>我的课程
+                                </a>
+                            </li>
+
+                            <li class=''>
+                                <a href='/Testing/Testing' microspot="学习中心-左侧我的题库菜单">
+                                    <i class="icon icon-square-list"></i>我的题库
+                                </a>
+                            </li>
+
+                            <li class=''>
+                                <a href='/Question/Question/Mine' microspot="学习中心-左侧我的问答菜单">
+                                    <i class="icon icon-commenting-o"></i>我的问答
+                                </a>
+                            </li>
+
+                            <li class=''>
+                                <a href='/Article/Article/Mine'>
+                                    <i class="icon icon-file"></i>我的文章
+                                </a>
+                            </li>
+                            <li class=''>
+                                <a href='/Order/Order'>
+                                    <i class="icon icon-file-wave"></i>我的订单
+                                </a>
+                            </li>
+                            
+                            <li class=''>
+                                <a href='/Course/Course/MyLive'>
+                                    <i class="icon icon-play-o"></i>在线直播
+                                </a>
+                            </li>
+                            <li class=''>
+                                <a href='/Credit/Credit'>
+                                    <i class="icon icon-user"></i>我的账户
+                                </a>
+                            </li>
+                            <li class=''>
+                                <a href='/Profile/Profile'>
+                                    <i class="icon icon-cog"></i>个人设置
+                                </a>
+                            </li>
+                            <li class=''>
+                                <a href='/Profile/Profile/MyResume'>
+                                    <i class="icon icon-file-pen"></i>我的简历
+                                </a>
+                            </li>
+                            <li class=''>
+                                <a href='/PlayCode/PlayCode'>
+                                    <i class="icon icon-play-circle-o-2"></i>播放码管理
+                                </a>
+                            </li>
+                            <li class=''>
+                                <a href='/VideoNote/VideoNote'>
+                                    <i class="icon glyphicon glyphicon-pencil" style="transform: rotate(145deg);-webkit-transform: rotate(145deg);-ms-transform: rotate(145deg);-o-transform: rotate(145deg);-moz-transform: rotate(145deg);"></i>我的笔记
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+             <!--Left End-->
+            </div>
+        </div>
+        <!--Main End-->
+        <!--Footer Begin-->
+        <footer class="footer">
+            <div class="w1200">
+
+                Copyright © 2008-2016 上海育创网络科技有限公司。备案号:沪ICP备10015848号-5<br />
+                上海浦东公安分局备案编号:3101150335558824
+            </div>
+        </footer>
+    </div>
+    <div aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="pup01">
+        <div class="modal-dialog modal-360">
+            <div class="modal-content">
+
+                <div class="modal-header tcenter">
+                    <h4 class="modal-title" id="alertTitle"></h4>
+                </div>
+
+                <div class="modal-body" id="alertContent">
+                </div>
+
+                <div class="modal-footer modal-bot container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12"><a href="#" data-dismiss="modal">确定</a></div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><i></i><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="pup02">
+        <div class="modal-dialog modal-360">
+            <div class="modal-content">
+                <div class="modal-header tcenter">
+                    <h4 class="modal-title" id="alertTitle1"></h4>
+                </div>
+                <div class="modal-body" id="alertContent1">
+                </div>
+
+                
+            </div><!-- /.modal-content -->
+        </div><i></i><!-- /.modal-dialog -->
+    </div>
+    <div aria-labelledby="myModalLabel" role="dialog" tabindex="-1" class="modal fade" id="pup03">
+        <div class="modal-dialog modal-360">
+            <div class="modal-content">
+                <div class="modal-header tcenter">
+                    <h4 class="modal-title" id="alertTitle3"></h4>
+                </div>
+                <div class="modal-body" id="alertContent3">
+                </div>
+
+                <div class="modal-footer modal-bot container-fluid">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12" >
+                        <ul>
+                            <li style="float:left;position: relative;left: 70px;"><a href="#" data-dismiss="modal" id="pup03OkBtn">确定</a></li>
+                            <li style="float:left;position: relative;left: 216px;"><a href="#" data-dismiss="modal" id="pup03CancelBtn">取消</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><i></i><!-- /.modal-dialog -->
+    </div>
+    <!--Footer End-->
+    <script src="/Scripts/Microspot.js"></script>
+    <script type="text/javascript" src="http://tpcss.ibeifeng.com//Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="/bundles/jqueryval?v=v2z4Z8qXYF6JsuzzQtx0LtcGD7Um7k1RcQLNLYyA-NE1"></script>
+
+    <script src="/Scripts/uploadifive/jquery.uploadifive.min.js"></script>
+    <script src="/bundles/moment?v=EOfI6FT3R7SOHDy8pW4rh9abm6fpPNpVDwPN1765Olg1"></script>
+
+    <script src="/bundles/jqueryext?v=obgInEexxvvJ08ZX3whESCQVIgVbsw3ztx7gi-JDiKs1"></script>
+
+    <script src="/bundles/bootstrap?v=DWlZEbNanZ0u07zqgQ8Qf1udwjAkpf37fFNaktJmdWc1"></script>
+
+    <script src="/bundles/angular?v=szXKGtVt25vHcaeD4YthdGuy1BLLfjIKeiTkzydlcGk1"></script>
+
+    <script src="/bundles/js?v=j9WYUxa3YilY1ymX8jtoEDhJCS-yuAwTbNBofhsragg1"></script>
+
+    <script src="/Scripts/ZeroClipboard/ZeroClipboard.js"></script>
+    <script type="text/javascript">
+        var user = {"Id":"7e790bad-4a1f-11e8-9297-008cfae57af0","UserName":"9813336@qq.com","UserDisplayName":"孙旌凯","Email":"9813336@qq.com","PhoneNumber":"13709932009","PhotoId":"4edd4b97-69ae-4787-b05b-f0a6841cdf77","PhotoPath":"/BfAuthCenter/2018/05/14/4edd4b97-69ae-4787-b05b-f0a6841cdf77\\0.JPG","NickName":"Kyle","Sex":true,"BirthDay":"1999-07-05T00:00:00","BirthPlace":"新疆石河子","Domicile":"新疆石河子市","QQ":"9813336","Weibo":"","WeChat":"","Description":"","UserType":1,"EnterpriseId":null,"LockoutEnabled":false,"UserNumber":521951,"RoleList":[],"FlowBelongToUserId":null,"TpcsTeacherId":null,"EmployeeId":null,"PasswordHashSS":null,"PermissionList":[],"ShowName":"Kyle","ShowRealName":"孙旌凯","LastSigninTime":"2018-12-31T00:50:06","RegistrationChannel":null}
+        var roles = [{"Id":"413e748d-9ec8-4cdb-9860-8996ed073aaa","Name":"超级管理员","Description":"超级管理员"},{"Id":"cc75ccef-2527-485e-8dc0-b58c24dc79d5","Name":"企业管理中心","Description":"企业登录的管理中心"},{"Id":"d8caa3e6-f2b2-43f0-9739-094d96e4584d","Name":"育创老师","Description":""}]
+        var setting = {"SubjectKnowledgePoints":"SubjectKnowledgePoints","SubjectTags":"SubjectTags","CurrentUserSessionKey":"CurrentUserSessionKey","QuartzXMLUrl":"Configs/Quartz.Jobs.xml","RootUrl":"http://tpcss.ibeifeng.com/","UploadUrl":"http://test.ibeifeng.com/upload/","SubjectLibraryWebUrl":"http://test.ibeifeng.com/","SSOWebApiUrl":"http://api.dotnetplatform.com:8001/Login/","SSOInternalWebApiUrl":"http://api.dotnetplatform.com:8001/AuthCenter/","SSORootUrl":"http://login.ibeifeng.com/","FileWebApiUrl":"http://fileupload.ibeifeng.com/api/FileManager/","HostUrl":"http://www.ibeifeng.com/","AngularJsViewUrl":"AngularJsView/","AppKey":"TestSystem","NoticeNewDuration":"5","CurrentUserLogoffUrlSessionKey":"5","MinDateString":"0001-01-01T00:00:00","PageCount":5,"MessageKey":"68fcf6cf-6df5-490f-ae96-ab7dd811566e","SystemMessageKey":"98e014d5-5467-463b-b8aa-15af2818afc1","SubjectLibraryWebApiUrl":"http://api.dotnetplatform.com:8001/TestSystem/api/","BFWApiKey":"UITN25LMUQC436IM","BFWApiUrl":"http://www.phpzhuzhan.com:8181/BFAPI/request.php","AppDomainName":"studentOnline","TpcssRoleName":"学生","TpcssRoleId":"96664cc4-ce16-4ccf-b7f7-d77560d55738","TpcstWebApiUrl":"http://api.dotnetplatform.com:8001/TpcsTeacher/","FileUnitConversion":1048576,"FilePath":"http://fileupload.ibeifeng.com/ServerFiles","TpcssWebOnlineUrl":"http://tpcsc.ibeifeng.com/","BBSWebApiUrl":"http://api.dotnetplatform.com:8001/bbs/","BBSWebUrl":"http://q.ibeifeng.com/","LogWebApiUrl":"http://api.dotnetplatform.com:8001/Log/","BFWApiBaseUrl":"http://www.ibeifeng.com/","TicketWebUrl":"http://tpcss.ibeifeng.com/ticket","TechnicalAdvisersRoleId":"CE01DF31-10D7-47B6-B6B9-DCA60101F89E","CRMWebApi":"http://api.dotnetplatform.com:8001/CRM/","CouponsWebApi":"http://localhost:6235/api/","WcfModifyApiUrl":"http://api.dotnetplatform.com:8001/TpcsStudentWebApi/api/","DegreeParent":"711d6d4b-3ea7-4252-9acd-08975962b5cb","TeacherRoleId":"d8caa3e6-f2b2-43f0-9739-094d96e4584d","RoleSessionKey":null,"MasterConnectionString":null,"TpcssWebUrl":null,"SingalRUrl":null,"OssAccessKeyId":null,"AccessKeySecret":null,"Endpoint":null,"VideoExpirationTime":0,"DownLoadFilePath":null,"ProductIdBaiDu":null,"UserIdBaiDu":null,"UserKeyBaiDu":null,"AccessKeyIdBaiDu":null,"SecretKeyBaiDu":null,"FileUploadPassword":null,"AppleAuditing":false,"StudentArchiveWebApiUrl":null,"CCLiveUserID":null,"CCLiveKey":null,"AliyunVideoExpirationTime":0,"LiveCdnKey":null}
+
+        function ialert(content, title, paras) {
+            if (!!title) {
+                $("#alertTitle").text(title);
+            }
+            else {
+                $("#alertTitle").text('提示');
+            }
+            $("#alertContent").html(content);
+            $("#pup01").modal(paras);
+            return false;
+        }
+
+        function ialertWithoutConfirm(content, title) {
+            if (!!title) {
+                $("#alertTitle1").text(title);
+            }
+            else {
+                $("#alertTitle1").text('提示');
+            }
+            $("#alertContent1").text(content);
+            $("#pup02").modal();
+            return false;
+        }
+
+        function iconfirm(content,title,yesCallback){
+            $("#alertTitle3").text(title);
+            $("#alertContent3").html(content);
+            // 确定按钮
+            $('#pup03OkBtn').click(function(){
+                yesCallback();
+            });
+            // 取消按钮
+            $('#pup03CancelBtn').click(function(){
+                $("#pup03").hide();
+            });
+            $("#pup03").modal();
+        }
+
+        function getGetUnreadMessageCountIncludeSystem() {
+            $.post('/Message/Message/GetUnreadMessageCountIncludeSystem', function (data) {
+                if (data.Key > 0) {
+                    $("#privateNotice").html(data.Key);
+                    $("#privateNotice").show();
+                } else {
+                    $("#privateNotice").hide();
+                }
+                if (data.Value > 0) {
+                    $("#systemMessageNotice").html(data.Value);
+                    $("#systemMessageNotice").show();
+                } else {
+                    $("#systemMessageNotice").hide();
+                }
+            });
+        }
+
+        // 保证footer始终在底部
+        function setContentHeight() {
+            $(".right-940").css("min-height", $(document).height() - (200 + $(".stu-info").height() + $(".footer").height()));
+        }
+
+        $(function () {
+            if(user){
+                getGetUnreadMessageCountIncludeSystem();
+                setInterval('getGetUnreadMessageCountIncludeSystem()', 180000);
+            }
+            setContentHeight();
+
+            //关闭工单提醒
+            $(".prompt-close").click(function(){
+                $(this).parent().hide();
+                localStorage.setItem("hideprompt",1);
+            });
+            var alreadyVal = localStorage.getItem("hideprompt");
+            if (alreadyVal!=1) {
+                $(".prompt-close").parent().show();
+            }
+            $(document).on("mouseover", ".but_share", function () {
+                init('', $(this).attr("id"));
+            });
+        });
+        //复制
+        function init(value, copycardid) {//粘贴板
+            ZeroClipboard.setMoviePath("/Scripts/ZeroClipboard/ZeroClipboard.swf")
+            var clip = new ZeroClipboard.Client(); // 新建一个对象
+            console.log(clip);
+            clip.setHandCursor(true);
+            clip.setText(value); // 设置要复制的文本。
+            clip.addEventListener("mouseUp", function (client) {
+                ialertWithoutConfirm("已经复制到剪切板！" + "\n" + value);
+            });
+            clip.glue(copycardid); // 和上一句位置不可调换
+        }
+    </script>
+    
+    <script src="/Scripts/bootstrap-datetimepicker.js"></script>
+    <script src="/Scripts/jquery.validate.js"></script>
+    <script src="/Scripts/jquery.extension.js?v=20180515"></script>
+
+    <script src="/Scripts/jquery.pagination.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("profileApp", []);
+        app.directive('onFinishRenderFilters',
+        function ($timeout) {
+            return {
+                restrict: 'A',
+                link: function (scope, element, attr) {
+                    if (scope) {
+                        $timeout(function () {
+                            //本页时间控件
+                            $('.js-datetimepicker-1')
+                                .datetimepicker({
+                                    locale: 'zh-cn',
+                                    format: 'YYYY-MM-DD'
+                                });
+                            $('.js-datetimepicker-2')
+                                .datetimepicker({
+                                    format: 'LT'
+                                });
+                        });
+                    }
+                }
+            };
+        });
+
+
+        function IsNeedSignAContract(id) {
+            $.post("/Course/Course/IsNeedSignAContract", { id: id }, function (result) {
+                if (result.IsSuccess) {
+                    ialert('正课时间还未开始！');
+                } else {
+                    window.location.href = result.url;
+                }
+            });
+        }
+        var jobCount = '2';
+        //var setOther = $("#setOther"), addInterview = $("#interviewDialog");
+        //$(function () {
+        //    setOther.kendoWindow({
+        //        title: "设置",
+        //        modal: true,
+        //        visible: false,
+        //        resizable: false,
+        //    }).data("kendoWindow");
+        //});
+        //function winInterviewClose() {
+
+        //    addInterview.data("kendoWindow").close();
+        //}
+        function copyStudyPlan(termStudy, recordId, classId) {
+            if (termStudy) {
+                ialert("你的学习期限已到！");
+            } else {
+                var urlCopyStudentStudyPlan =
+                    "/Course/Course/CopyStudentStudyPlanByRecordId";
+                var urlRedirect = arguments.length < 3
+                    ? "/Course/Course/Plan" + "?purchaseProductId=" + recordId
+                    : setting.TpcssWebOnlineUrl +
+                    "class/class/index?purchaserecordId=" +
+                    recordId;
+
+                ialertWithoutConfirm('正在为你创建学习计划，请稍等。。。');
+                $.post(urlCopyStudentStudyPlan,
+                    { studentId: user.Id, recordId: recordId },
+                    function (result) {
+
+                        $("#pup02").modal('hide');
+
+                        if (result) {
+                            window.location.href = urlRedirect;
+                        } else {
+                            ialert('复制学习计划失败，请联系任课老师开通定制学习计划!');
+                        }
+                    })
+            }
+        }
+
+        function valid(isEnabled, termStudy, id) {
+            if (!isEnabled) {
+                ialert("你的学习计划目前已停用！如需继续学习，请联系负责的老师！");
+                return;
+            }
+            if (termStudy) {
+                ialert("你的学习期限已到！");
+            } else {
+                window.location.href = "/Course/Course/Plan" +
+                    "?purchaseProductId=" +
+                    id;
+            }
+
+        }
+
+        function validGiftVideo(isEnabled, termStudy, id, studyPlanId) {
+            if (!isEnabled) {
+                ialert("你的学习计划目前已停用！如需继续学习，请联系负责的老师！");
+                return;
+            }
+            if (termStudy) {
+                ialert("你的学习期限已到！");
+            } else {
+                //window.location.href = "/Course/Course/Plan?purchaseProductId=" +id;
+                if (studyPlanId == null || studyPlanId == "")
+                {
+                    ialertWithoutConfirm('正在为你创建学习计划，请稍等。。。');
+                }
+                $.post(
+                    "/Course/Course/IsCopyStudentStudyPlan",
+                    { studentId: user.Id, recordId: id },
+                    function (result) {
+
+                        $("#pup02").modal('hide');
+
+                        if (result.IsSuccess) {
+                            window.location.href = result.url;
+                        } else {
+                            ialert('复制学习计划失败，请联系任课老师开通定制学习计划!');
+                        }
+                    })
+            }
+
+        }
+
+        function offLineValid(termStudy, pid, cid, isEnabled) {
+            if (!isEnabled) {
+                ialert("您目前处于休学中，如有问题请联系该班级的老师!");
+                return;
+            }
+            if (termStudy) {
+                ialert("你的学习期限已到！");
+            } else {
+                window.location.href = "http://tpcsc.ibeifeng.com/class/class/index?" + "purchaserecordId=" + pid;
+            }
+
+        }
+
+        function getOfflineCourse(index) {
+            var url = "/Course/Course/GetOfflineCourseByStudentId";
+            var urlOfflineCourseDetail = "/Course/Course/OfflineCourseDetail";
+            var pageIndex = !!index ? index : $("#pageIndex").val();
+
+            $.post(url,
+                { studentId: user.Id, pageIndex: pageIndex, PageSize: 9, KeyWord: $("#txtKeyWord").val().trim() },
+                function (data) {
+                    $("#container").empty();
+
+                    var courses = data.Result;
+                    if (courses.length == 0) {
+                        var tag = '<div class="noContent-2 tcenter"><i class="icon icon-cup"></i><p class="mb10">您还没有选择任何课程</p></div>';
+                        if ($("#txtKeyWord").val().trim().length > 0) {
+                            tag = '<div class="noContent-2 tcenter"><i class="icon icon-cup"></i><p class="mb10">没有满足要求的数据</p></div>';
+                        }
+                        $(tag).appendTo($("#container"));
+                        $("#couseCount").html("0");
+                        initalizePagination(data.PageInfo.PageNumber, 0);
+                    } else {
+                        $.each(courses,
+                            function (i, v) {
+                                var tag = "<li class='myC-item'>";
+                                var courseType = v.IsVip ? "1" : "0";
+                                var imgUrl = v.ImagePath == null || v.ImagePath == "" ? "/images/default.jpg" : "http://fileupload.ibeifeng.com/ServerFiles" + v.ImagePath;
+                                var urlDetail = urlOfflineCourseDetail + "?CourseHistoryId=" + v.CourseHistoryId + "&IsVip=" + (v.IsVip ? "1" : "0") + "&OrderSn=" + v.OrderSn;
+                                tag += "<a microspot='学习中心-我的课程-课程产品-" + v.Name + "' class='lxmimg' href='" + urlDetail + "'>";
+                                tag += "<img src='" + imgUrl + "'>";
+                                tag += "<i></i>";
+                                tag += "</a>";
+                                tag += " <div class='con'>";
+                                tag += "<a microspot='学习中心-我的课程-课程产品-" + v.Name + "' class='name overf' href='" + urlDetail + "' title='" + v.Name + "'>" + v.Name + "</a>";
+                                tag += "<p style='height:25px'><span class='mr10'>课程：1</span>学时：" +
+                                    v.PeriodDays +
+                                    "</p>";
+                                tag += "</div>";
+                                tag += "</li>";
+                                $(tag).appendTo($("#container"));
+                            });
+                        $("#couseCount").html(data.PageInfo.TotalRecordCount);
+                        $("#pageIndex").val(!!index ? index : data.PageInfo.PageNumber);
+                        initalizePagination(data.PageInfo.PageNumber, data.PageInfo.TotalRecordCount);
+                        if (data.PageInfo.TotalRecordCount == 0 && $("#txtKeyWord").val().trim().length > 0) {
+                            $("#container").html('<div class="noContent-2 tcenter"><i class="icon icon-cup"></i><p class="mb10">没有满足要求的数据</p></div>');
+                        }
+                    }
+                });
+        }
+
+        function initalizePagination(pageInex, pageCount) {
+            var pageIndex = $("#pageIndex").val();
+            opts = {
+                handler: 'getOfflineCourse',
+                route: "", //路由
+                current_page: pageIndex - 1, //页码
+                items_per_page: 9, //第页条数
+                total: pageCount //总纪录数
+            }
+            $("#pagination").pagination(opts);
+        }
+
+        function getCollectionCourse(index) {
+            var url = "/Course/Course/GetCollectionCourse";
+            var pageIndex = !!index ? index : $("#pageIndexCollect").val();
+            var hostUrl = 'http://www.ibeifeng.com/' + "category.html";
+            $.post(url,
+                    { studentId: user.Id, pageIndex: pageIndex, KeyWord: $("#txtKeyWord").val().trim() },
+                    function (data) {
+                        $("#pageIndexCollect").val(!!index ? index : data.pageIndex);
+                        initalizePageCollect(data.pageIndex, data.pageCount);
+                        if (data == '') {
+                            ialert("获取收藏课程失败！");
+                            $("#couseCount").html("0");
+                        } else {
+                            $("#containerCollect").empty();
+
+                            var courses = data.goods;
+                            if (courses.length == 0) {
+                                var tag =
+                                    '<div class="noContent-2 tcenter"><i class="icon icon-cup"></i><p class="mb10">您还收藏任何课程</p><a class="normal-btn green" target="_blank" href="' + hostUrl + '">前去收藏</a></div>';
+                                if ($("#txtKeyWord").val().trim().length > 0) {
+                                    tag = '<div class="noContent-2 tcenter"><i class="icon icon-cup"></i><p class="mb10">没有满足要求的数据</p></div>';
+                                }
+                                $(tag).appendTo($("#containerCollect"));
+                                $("#couseCount").html("0");
+                            } else {
+                                $.each(courses,
+                                    function (i, v) {
+                                        var tag = "<li class='myC-item'>";
+                                        if (v.tpcs_guid != null) {
+                                            tag += '<div class="mask type-two"></div>';
+                                        }
+                                        tag += "<a microspot='学习中心-我的课程-收藏课程产品-" + v.cours_name + "' target='_blank' class='lxmimg' href='" + v.link + "'>";
+                                        tag += "<img src='" + v.original_img + "'>";
+                                        tag += "<i></i>";
+                                        tag += "</a>";
+                                        tag += " <div class='con'>";
+                                        tag += '<a microspot="学习中心-我的课程-收藏课程产品-' + v.cours_name + '-取消收藏" class="fav-btn" title="取消收藏"  href="#" onclick="cancleCollectCourse(' + v.id + ')"><i class="heart full"></i></a>';
+                                        tag += "<a microspot='学习中心-我的课程-收藏课程产品-" + v.cours_name + "' target='_blank' class='name overf' href='" + v.link + "' title='" + v.cours_name + "'>" + v.cours_name + "</a>";
+                                        tag += "<p style='height:25px'><span class='mr10'>课程：" +
+                                            v.CourseCount +
+                                            "</span>学时：" +
+                                            v.lessontime +
+                                            "</p>";
+                                        tag += "</div>";
+                                        tag += "</li>";
+                                        $(tag).appendTo($("#containerCollect"));
+                                    });
+                                $("#couseCount").html(data.pageCount);
+                                if (data.pageCount == 0 && $("#txtKeyWord").val().trim().length > 0) {
+                                    $("#containerCollect").html('<div class="noContent-2 tcenter"><i class="icon icon-cup"></i><p class="mb10">没有满足要求的数据</p></div>');
+                                }
+                            }
+                        }
+                    })
+                .error(function () {
+                    ialert("服务器异常，获取收藏课程失败！");
+                });
+        }
+        function cancleCollectCourse(id) {
+            var url = '/Course/course/CancleCollectionCourse';
+            $.post(url,
+                    { id: id },
+                    function (data) {
+                        if ($.parseJSON(data).state == '1') {
+                            ialert("取消收藏成功！");
+                            getCollectionCourse();
+                        } else {
+                            ialert("取消收藏失败！");
+                        }
+                    })
+                .error(function () {
+                    ialert("服务器异常，取消收藏失败！");
+                });
+        }
+        function initalizePageCollect(pageIndex, pageCount) {
+            var pageIndex = $("#pageIndexCollect").val();
+            opts = {
+                handler: 'getCollectionCourse',
+                route: "", //路由
+                current_page: pageIndex - 1, //页码
+                items_per_page: 9, //第页条数
+                total: pageCount //总纪录数
+            }
+
+            $("#paginationCollect").pagination(opts);
+        }
+
+        function quitSchoolOperation(Id) {
+            if (ApplyAbsenceType) {
+                $scope.cancelQuit(Id);
+            } else {
+                $scope.quitSchool(Id);
+            }
+        }
+
+
+
+        function show(Id, e) {
+            applyBtnObj = e;
+            //thisRecordId = Id;
+            $("input[name='RecordId']").val(Id);
+            $("#setOther").modal('show');
+        }
+        //休学
+        function quitSchool(Id, message) {
+            $("#RecordId").val(Id);
+            $("#setOther").modal('show');
+            
+        }
+
+        //取消休学
+        function cancelQuit(purId, message) {
+            var url = '/Course/Course/CancelQuit';
+            $.post(url,
+                {
+                    purId: purId,
+                },
+                function (data) {
+                    if (data.success) {
+                        $("#btn_" + purId).text("申请取消休学中");
+                        $("#btn_" + purId).removeAttr("onclick");
+                        $("#btn_" + purId).css("background-color", "grey");
+                        ialert("申请取消休学已提交！");
+                        getOfflineCourse();
+                    } else {
+                        ialert(data.msg);
+                    }
+                })
+            .error(function () {
+                ialert("取消休学失败");
+            });
+        }
+
+
+        function getAuthExam(index) {
+            var url = "/Course/Course/GetAuthExamByStudentId";
+            index = index ? index : $("#pageIndexAuthExam").val();
+            var pageIndex = index;
+            $.post(url, { pageIndex: pageIndex, pageSize: 9, KeyWord: $("#txtKeyWord").val().trim(), CertType: $("#ddlCertType").val().trim() }, function (data) {
+                $("#containerAuthExam").empty();
+                if (data.Total > 0) {
+                    var url = setting.TpcssWebOnlineUrl + '/Job/Job/CertificationExamInfo?purchaseProductId=';
+                    $.each(data.CertificationExamList, function (i, v) {
+                        var tag = "<li class='myC-item'>";
+                        tag += "<a microspot='学习中心-我的课程-认证考试-" + v.Name + "' class='lxmimg' href='" + url + v.PurchaseRecordId + "'>";
+                        tag += "<img src='" + 'http://fileupload.ibeifeng.com/ServerFiles' + v.ImagePath + "'>";
+                        tag += "<i></i>";
+                        tag += "</a>";
+                        tag += " <div class='con'>";
+                        tag += "<a microspot='学习中心-我的课程-认证考试-" + v.Name + "' class='name overf' href='" + url + v.PurchaseRecordId + "' title='" + v.Name + "'>" + v.Name + "</a>";
+                        tag += "</div>";
+                        tag += "</li>";
+                        $(tag).appendTo($("#containerAuthExam"));
+                    });
+                    $("#pageIndexAuthExam").val(index ? index : data.pageIndex);
+                    $("#couseCount").html(data.Total);
+                } else {
+                    var tag =
+                        '<div class="noContent-2 tcenter"><i class="icon icon-cup"></i><p class="mb10">您还没有选择任何认证考试</p></div>';
+                    if ($("#txtKeyWord").val().trim().length > 0) {
+                        tag = '<div class="noContent-2 tcenter"><i class="icon icon-cup"></i><p class="mb10">没有满足要求的数据</p></div>';
+                    }
+                    $(tag).appendTo($("#containerAuthExam"));
+                    $("#couseCount").html("0");
+                }
+                initalizePaginationAuthExam(index ? index : data.pageIndex, data.Total);
+            });
+        }
+        function initalizePaginationAuthExam(pageInex, pageCount) {
+            var pageIndex = $("#pageIndexAuthExam").val();
+            opts = {
+                handler: 'getAuthExam',
+                route: "", //路由
+                current_page: pageIndex - 1, //页码
+                items_per_page: 9, //第页条数
+                total: pageCount //总纪录数
+            }
+            $("#paginationAuthExam").pagination(opts);
+        }
+
+        
+        //function initalizePaginationALiYunExam(pageInex, pageCount) {
+        //    var pageIndex = $("#pageIndexALiYunExam").val();
+        //    opts = {
+        //        handler: 'getALiYunExam',
+        //        route: "", //路由
+        //        current_page: pageIndex - 1, //页码
+        //        items_per_page: 9, //第页条数
+        //        total: pageCount //总纪录数
+        //    }
+        //    $("#paginationALiYunExam").pagination(opts);
+        //}
+    </script>
+                <script type="text/javascript">
+
+            $(function () {
+                var tabLi = $(".js-tab>a");
+                var currentIndex = 0;
+                var couseCountEle = $("#couseCount");
+                var keyWord = $("#txtKeyWord");
+                var CertType = $("#ddlCertType");
+                var btnSearchEle = $("#btnSearch");
+                tabLi.click(function () {
+                    $("#divSelect").hide();
+                    $(this).addClass("cur").siblings().removeClass("cur");
+                    currentIndex = $(this).index();
+                    $(".js-tab-box .js-tab-con").eq(currentIndex).show().siblings().hide();
+                    keyWord.val("");
+                    if ($(this).text() == "课程") {
+                        getOfflineCourse();
+                    }
+                    if ($(this).text() == "收藏课程") {
+                        getCollectionCourse();
+                    }
+                    if ($(this).text() == "就业课") {
+                        couseCountEle.html(jobCount);
+                    }
+                    if ($(this).text() == "认证考试") {
+                        getAuthExam();
+                        $("#divSelect").show();
+                    }
+                    //if ($(this).text() == "工信部认证考试") {
+                    //    getAuthExam();
+                    //}
+                    //if ($(this).text() == "阿里云认证考试") {
+                    //    getALiYunExam();
+                    //}
+                });
+                btnSearchEle.click(function () {
+                    var keyWordVal = keyWord.val().trim();
+                    if (currentIndex == 0) {
+                        $("#divNoneJyk").hide();
+                        var liEles = $(".js-tab-con").eq(0).find("li.myC-item");
+                        if (keyWordVal.length < 1) {
+                            liEles.show();
+                            couseCountEle.html(liEles.length);
+                        } else {
+                            var count = 0;
+                            liEles.each(function (j, item) {
+                                if ($(this).find(".con>a").text().toLocaleLowerCase().indexOf(keyWordVal.toLocaleLowerCase()) > -1) {
+                                    count++;
+                                    $(this).show();
+                                } else {
+                                    $(this).hide();
+                                }
+                            });
+                            couseCountEle.html(count);
+                            if (count < 1) {
+                                $("#divNoneJyk").show();
+                            }
+                        }
+                    } else if (currentIndex == 1) {
+                        getOfflineCourse(1);
+                    } else if (currentIndex == 2) {
+                        getCollectionCourse(1);
+                    } else if (currentIndex == 3) {
+                        getAuthExam(1);
+                    }
+                    //} else if (currentIndex == 4) {
+                    //    getALiYunExam(1);
+                    //}
+                });
+                $(document).keyup(function (event) {
+                    if (event.keyCode == 13) {
+                        btnSearchEle.trigger("click");
+                    }
+                });
+
+                $("#divSelect").change(function () {
+                    btnSearchEle.click();
+                });
+
+                $("#schoolbtn").click(function () {
+                    var thisRecordId = $("#RecordId").val();
+                    var planneddate = $("#PlannedDay").val();
+                    if (planneddate == "") {
+                        ialert("请选择休学截止日期！");
+                        return;
+                    }
+                    //截止日期不能小于当前日期
+                    var d = new Date(Date.parse(planneddate.replace(/-/g, "/")));
+                    var curDate = new Date();
+                    if (d <= curDate) {
+                        ialert("休学截止日期不得小于当前日期！");
+                        return;
+                    }
+
+
+                    if (thisRecordId) {
+                        $.ajax({
+                            type: "post",
+                            url: '/Course/Course/AddQuitSchool',
+                            data: { recordId: thisRecordId, remark: $("#Remark").val(), PlannedDate: planneddate },
+                            dataType: "json",
+                            before: function () {
+                                $("#schoolbtn").attr("disabled", true).val("提交中...").addClass("disabled-btn");
+                            },
+                            success: function (data) {
+                                $("#schoolbtn").attr("disabled", false).val("提交").removeClass("disabled-btn");
+                                if (data.success) {
+                                    $("#setOther").modal('hide');
+                                    $("#btn_" + thisRecordId).text("申请中");
+                                    $("#btn_" + thisRecordId).removeAttr("onclick");
+                                    $("#btn_" + thisRecordId).css("background-color", "grey");
+                                    ialert("申请成功！");
+                                }
+                                else {
+                                    $("#setOther").modal('hide');
+                                    ialert(data.msg);
+                                }
+                            },
+                            error: function () {
+                                ialert("休学失败！");
+                            }
+
+                        });
+                    } else {
+                        ialert("信息错误！");
+                    }
+                });
+            });
+        </script>
+
+</body>
+</html>
